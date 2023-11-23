@@ -1,0 +1,61 @@
+@import "./config";
+@import "./animations.scss";
+
+@font-face {
+  font-family: Regular;
+  font-display: swap;
+  src: url("/assets/fonts/Inter-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: Bold;
+  font-display: swap;
+  src: url("/assets/fonts/Inter-Bold.woff2") format("woff2");
+}
+
+// Sass also allows the use of comments with "//"
+body {
+  @include fontType("regular"); // Mixin
+  @include fontSize("regular"); // Mixin
+  background: $black; // Variable
+  color: $white; // Variable
+  margin: 0;
+}
+
+section {
+  min-height: 100vh;
+  padding: 40px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  line-height: 1.4;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@include media("xs") {
+  section {
+    padding: 120px;
+  }
+}
